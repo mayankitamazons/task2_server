@@ -64,8 +64,9 @@ exports.register = [
 				return apiResponse.validationErrorWithData(res, "Validation Error.", errors.array());
 			}
 			else {
-				//Save User.
-				User.find({email:req.body.email}, function (err, foundUser) {
+				//check email and if not exit then insert new user
+				User.findOne({email:req.body.email}, function (err, foundUser) {
+					console.log(foundUser);
 					if(foundUser){
 						return apiResponse.notFoundResponse(res,"User with given email is already Exits");
 					}
