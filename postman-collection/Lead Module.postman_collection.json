@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "0426044e-d421-4a2c-af72-aad71a9f794f",
+		"name": "Lead Module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "396714",
+		"_collection_link": "https://dhanuinfo.postman.co/workspace/Mayank-Workspace~964d1b38-9358-4849-8487-ea658960e0d4/collection/396714-0426044e-d421-4a2c-af72-aad71a9f794f?action=share&creator=396714&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Raj\",\r\n    \"lastName\":\"sharma\",\r\n    \"email\":\"r@gmail.com\",\r\n    \"contact_no\":9001025472\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}api/user",
+							"host": [
+								"{{HOST_URL}}api"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All user List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}api/user/list",
+							"host": [
+								"{{HOST_URL}}api"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single User Data by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}api/user/64931226706d0e9e999076ae",
+							"host": [
+								"{{HOST_URL}}api"
+							],
+							"path": [
+								"user",
+								"64931226706d0e9e999076ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete User By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST_URL}}api/user/649314cc3c8452cf9b410684",
+							"host": [
+								"{{HOST_URL}}api"
+							],
+							"path": [
+								"user",
+								"649314cc3c8452cf9b410684"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"lastName\":\"Upadhyay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_URL}}api/user/64931226706d0e9e999076ae",
+							"host": [
+								"{{HOST_URL}}api"
+							],
+							"path": [
+								"user",
+								"64931226706d0e9e999076ae"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Save New Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie_name\":\"Moive 21\",\r\n    \"released_date\":\"2023-05-30\",\r\n    \"rating\":1,\r\n    \"cover_image\":\"https://ntvb.tmsimg.com/assets/p6326_v_h8_be.jpg?w=1280&h=720\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/movie",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/movie",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
